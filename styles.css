@@ -1,0 +1,127 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.statusMessageText {
+  font-size: small;
+}
+
+#beatGridDeck1,
+#beatGridDeck2 {
+  position: relative;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  width: 80%;
+  height: 200px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+#soundSelector {
+  margin: 10px;
+}
+
+#bpm {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#startButton {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#stopButton {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="range"] {
+  width: 300px;
+}
+
+.middle-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: gray;
+  z-index: 3;
+}
+
+.hidden {
+  display: none;
+}
+
+.moving-line-left {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: gray;
+  animation: moveLineCenterToLeft 2s linear infinite;
+  z-index: 1;
+}
+
+.moving-line-right {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 2px;
+  height: 100%;
+  background-color: gray;
+  animation: moveLineRightToCenter 2s linear infinite;
+  z-index: 1;
+}
+
+@keyframes moveLineRightToLeft {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes moveLineRightToCenter {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes moveLineCenterToLeft {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes moveLine {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 100%;
+  }
+}
