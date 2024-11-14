@@ -56,7 +56,7 @@ input[type="range"] {
   left: 50%;
   width: 2px;
   height: 100%;
-  background-color: gray;
+  background-color: blue;
   z-index: 3;
 }
 
